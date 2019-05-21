@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900|Roboto:400,500,700,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F2F1EF;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+
+header{
+    /* border-bottom: 1px solid #cccccc; */
+    color: #681857;
+    font-size: 25px;
+    padding: 30px 0px;
+}
+
+header h1{
+    font-size: 2.5em;
+}
+
+header strong{
+    display: block;
+    color: #a71b7b;
+    font-size: 0.7em;
+    font-weight: bolder;
+    margin-top: -5px;
+}
+
+main{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 15px auto;
+    max-width: 1140px;
+    min-height: 50vh;
+    padding: 15px;
+}
+
+main section{
+    position: relative;
+    min-height: 50vh;
+}
+
+main section img{
+    position: absolute;
+    width: 200px;
+}
+
+main .call-to-action{
+    margin: 0 auto;
+    max-width: 991px;
+}
+
+main .call-to-action img{
+    position: absolute;
+}
+
+main .call-to-action .img-1{
+    left: 0;
+    bottom: 0;
+}
+
+main .call-to-action .img-2{
+    width: 250px;
+    right: 0;
+    top: 0;
+}
+
+main .call-to-action h2{
+    color: #681857;
+    line-height: 0.95;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    padding-top: 100px;
+    text-transform: uppercase;
+}
+
+main .call-to-action h3{
+    font-size: 0.9em;
+    font-weight: 800;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+main .call-to-action p{
+    margin: 0 auto;
+    width: 500px;
+}
+
+footer{
+    background-color: #958BAD;
+}
+
+@media screen and (max-width: 835px){
+    main .call-to-action .img-1{
+        width: 150px;
+    }
+    
+    main .call-to-action .img-2{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    main .call-to-action .img-2{
+        left: 30px;
+        right: auto;
+        top: -30px;
+    }
+    
+    main .call-to-action .img-1{
+        bottom: 100px;
+    }
+
+    main .call-to-action{
+        text-align: right;
+    }
+
+    main .call-to-action h2 {
+        padding-top: 30px;
+    }
+
+    main .call-to-action p {
+        margin: 0 auto;
+        width: 500px;
+        margin: 0;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 617px){
+    main .call-to-action .img-1{
+        bottom: 150px;
+        width: 100px;
+    }
+
+    main .call-to-action .img-2 {
+        left: 10px;
+        right: auto;
+        top: -30px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 592px){
+    main .call-to-action h2 {
+        font-size: 1.5em;
+    }
+
+    main .call-to-action p {
+        width: 82%;
+    }
+}
+
+
+@media screen and (max-width: 478px){
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header strong{
+        font-size: 0.6em;
+    }
+
+    main .call-to-action h2{
+        padding-top: 20px;
+    }
+
+    main .call-to-action .img-1{
+        left: -20px;
+        bottom: 40px;
+        width: 70px;
+    }
+
+    main .call-to-action .img-2{
+        left: auto;
+        right: -10px;
+        top: -55px;
+        width: 100px;
+    }
+}
