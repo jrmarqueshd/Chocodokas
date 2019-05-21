@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900|Roboto:400,500,700,900,900i&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
     <header>
@@ -17,31 +17,40 @@
     </header>
     <main class="main-content">
         <section class="call-to-action">
-            <img class="img-2" src="/img/chocodokas-trufa-1.png" alt="Chocodoka's Realizando sonhos" />
-            <img class="img-1" src="/img/chocodokas-trufa-2.png" alt="Chocodokas tornando sua vida mais doce" />
+            <img class="img-2" src="./img/chocodokas-trufa-1.png" alt="Chocodoka's Realizando sonhos" />
+            <img class="img-1" src="./img/chocodokas-trufa-2.png" alt="Chocodokas tornando sua vida mais doce" />
             <h2>O dia dos namorados<br /> está chegando!</h2>
             <h3>Já sabe o que fazer para aumentar sua renda?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor distinctio, voluptates odio ratione optio quia eaque ipsam exercitationem error, illum nam maiores iste sequi provident. Earum sit libero repellat.</p>
         </section>
         <div class="-parallax"></div>
-        <section>
-            <img src="/img/chocodokas-trufa-3.png" alt="Chocodoka's ganhe dinheiro adoçando vidas" />
-            <img src="/img/chocodokas-trufa-4.png" alt="Chocodokas lucre até 200% a mais" />
-            <video></video>
-        </section>
-        <div class="-parallax"></div>
-        <section>
-            <form>
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
+        <section class="form-to-lead">
+            <a href="#form">
+                <img class="news-thumb" src="./img/chocodokas-noticia-g1-sobre-vendas-dia-dos-namorados.jpg" alt="Notícia oficial do G1" />
+                <img class="news-thumb-mobile" src="./img/chocodokas-noticia-g1-sobre-vendas-dia-dos-namorados-mobile" alt="Notícia oficial do G1" />
+            </a>
+            <form id="form">
+                <strong>Se você quer aumentar a sua renda fazendo até <mark>R$200,00 por dia</mark><br />Preencha este formulário.</strong>
+                <input type="text" placeholder="DIGITE O SEU NOME" />
+                <input type="tel" placeholder="DIGITE O SEU WHATSAPP" />
+                <input type="email" placeholder="DIGITE O SEU MELHOR E-MAIL" />
                 <button>Clique aqui para ganhar dinheiro</button>
             </form>
         </section>
+        <section class="video-to-motivation">
+            <h3>Você sabe o que<br /> convence os clientes?</h3>
+            <p class="desc-to-video">Assista pelo menos <mark>30 segundos</mark> do vídeo abaixo para entender?</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Wwme7HXZ_9Q?start=37" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h2>Nada é impossível para quem tem vontade de vencer!</h2>
+            <a href="#form"><button class="destach-to-form">Clique aqui para mudar de vida</button></a>
+        </section>
+        <div class="-parallax"></div>
     </main>
-    <footer class="main-footer">
-        <!-- <img src="/img/chocodokas-trufa-5.png" alt="Feito com amor por Chocodoka's" />
-        <p>Feito com amor por: <img src="/img/logo-chocodokas.png" alt="Logo da Chocodoka's" /> &copy; <span id="since"></span></p> -->
+    <footer id="footer" class="main-footer">
+        <img class="img-1" src="./img/chocodokas-trufa-5.png" alt="Feito com amor por Chocodoka's" />
+        <p>Feito com &hearts; por: <img src="./img/logo-chocodokas.png" alt="Logo da Chocodoka's" /> &copy; <span id="since"></span></p>
     </footer>
 </body>
 </html>
