@@ -419,3 +419,14 @@ footer p img{
         width: 90%;
     }
 }
+
+@media screen and (max-width: 454px){
+    .-parallax {
+        background-position: center;
+    }
+
+    .-parallax p {
+        padding: 40px;
+        font-size: 1.5em;
+    }
+}
