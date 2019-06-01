@@ -1,0 +1,33 @@
+{
+  "name": "chocodokas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrmarqueshd/chocodokas.git"
+  },
+  "keywords": [
+    "chocolates",
+    "trufas",
+    "doces"
+  ],
+  "author": "Junior Marques",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrmarqueshd/chocodokas/issues"
+  },
+  "homepage": "https://github.com/jrmarqueshd/chocodokas#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "4.0.0",
+    "gulp-clean-css": "4.2.0",
+    "gulp-js-minify": "0.0.3",
+    "gulp-livereload": "4.0.1",
+    "gulp-rename": "1.4.0",
+    "gulp-watch": "5.0.1"
+  }
+}

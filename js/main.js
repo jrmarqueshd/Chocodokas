@@ -11,7 +11,7 @@ function scrollToPosition(to) {
 
 function scrollToIdOnClick(event) {
 	event.preventDefault();
-	const to = getScrollTopByHref(event.currentTarget) + 500;
+	const to = getScrollTopByHref(event.currentTarget) + 450;
 	scrollToPosition(to);
 }
 
@@ -70,10 +70,10 @@ window.addEventListener("load", ()=>{
     const $nameForm = document.getElementById("nameForm");
     const $telForm = document.getElementById("telForm");
     const $emailForm = document.getElementById("emailForm");
-    let $form = document
+    // let $form = document
 
     $button.addEventListener("click", (e)=>{
-      e.preventDefault();
+      // e.preventDefault();
 
       try{
         if($nameForm.value == "" || $nameForm.value == " ") throw "Por favor, preencha o seu nome!";
@@ -83,10 +83,13 @@ window.addEventListener("load", ()=>{
           nameUrl = $nameForm.value;
           telUrl = $telForm.value;
           emailUrl = $emailForm.value;
+          telNumber = "11958804102";
 
           msg = `Ol%C3%A1%20me%20chamo%20*${nameUrl}*%20meu%20n%C3%BAmero%20%C3%A9%20o%20*${telUrl}*%20*${emailUrl}*,%20gostaria%20de%20saber%20mais%20sobre%20a%20venda%20de%20trufas%21%20`;
-          urlFinal = `https://api.whatsapp.com/send?phone=551920016009&text=${msg}`;
+          urlFinal = `https://api.whatsapp.com/send?phone=55${telNumber}&text=${msg}`;
           window.open(urlFinal, "_blank").focus();
+
+          window.open = "";
         }
       }
       catch(err){
@@ -102,5 +105,4 @@ window.addEventListener("load", ()=>{
     else{
         $year.innerText = `${since} - ${year}.`;
     }
-
 });
