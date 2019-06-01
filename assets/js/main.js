@@ -94,9 +94,9 @@ window.addEventListener("load", ()=>{
       }
       catch(err){
         alert(err);
-      } 
-    });
+      }
 
+    });
 
     // Imprime since no footer
     if(since == year){

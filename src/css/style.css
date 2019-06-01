@@ -269,11 +269,11 @@ footer p img{
     border-radius: 5px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
-    background-image: url("/img/parallax-chocodokas-1.jpg");
+    background-image: url("/assets/img/parallax-chocodokas-1.jpg");
     background-attachment: fixed;
     background-size: cover;
     margin-bottom: 50px;
-    width: 100%;    
+    width: 100%;
 }
 
 .-parallax p{
