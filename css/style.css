@@ -15,6 +15,13 @@ body{
     margin: 0 auto;
 }
 
+body.thanks{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
 header{
     /* border-bottom: 1px solid #cccccc; */
     color: #681857;
@@ -51,6 +58,46 @@ main section{
 main section img{
     position: absolute;
     width: 200px;
+}
+
+main.main-content{
+    min-height: 90vh;
+}
+
+main.main-content section img{
+    position: static;
+    width: 80px;
+}
+
+main.main-content h1{
+    color: #681857;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+main.main-content h1 span{
+    color: #a71b7b;
+}
+
+main.main-content p{
+    display: block;
+    margin: 15px auto; 
+    max-width: 80%;
+}
+
+main.main-content button{
+    background-color: #681857;
+    border: 1px solid white; 
+    border-radius: 5px;
+    box-shadow: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+    outline: #a71b7b;
+    padding: 15px;
+    text-transform: uppercase;
 }
 
 main .call-to-action {
