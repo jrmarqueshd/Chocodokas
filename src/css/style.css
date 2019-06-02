@@ -124,6 +124,12 @@ main .form-to-lead a .news-thumb-mobile {
     display: none;
 }
 
+main .form-to-lead a .news-thumb,
+main .form-to-lead a .news-thumb-mobile{
+    border: 5px solid #B6A0B8;
+    border-radius: 5px;
+}
+
 main .form-to-lead strong{
     display: block;
     margin: 25px 0;

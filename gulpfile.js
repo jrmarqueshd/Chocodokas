@@ -4,6 +4,8 @@ let watch = require("gulp-watch");
 let clean = require("gulp-clean-css");
 let minify = require("gulp-minify");
 let livereload = require("gulp-livereload");
+let tinyPNG = require("gulp-tinypng-compress");
+let hmtlMin = require("gulp-htmlmin");
 
 gulp.task("watchCSS", ()=>{
     livereload.listen();
@@ -22,4 +24,30 @@ gulp.task("watchJS", ()=>{
         .pipe(livereload(console.log("Start watching JS...")));
 });
 
-gulp.task("default", gulp.parallel(['watchCSS', 'watchJS']));
+gulp.task("watchImage", ()=>{
+    livereload.listen();
+    return watch("./src/img/*", {ignoreInitial: false})
+        .pipe(tinyPNG({
+            key: "GIiBwwZEtaA4lb1V4O2zZqVf22jvlxGy",
+            sigFile: "images/.tinypng-sigs",
+            summarize: true,
+            log: true
+        }))
+        .pipe(gulp.dest("./assets/img/"))
+        .pipe(livereload(console.log("Start watching Image...")));
+});
+
+gulp.task("htmlMin", ()=>{
+    livereload.listen();
+    return watch("./src/*.html", {ignoreInitial: false})
+        .pipe(hmtlMin({
+            collapseWhitespace: true,
+            minifyJS: true,
+            minifyURLs: true,
+        }))
+        .pipe(gulp.dest("./"))
+        .pipe(livereload(console.log("Start watching HTML...")))
+});
+
+gulp.task("default", gulp.parallel(['watchCSS', 'watchJS','htmlMin']));
+gulp.task("tinyPNG", gulp.parallel(['watchImage']));
