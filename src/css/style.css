@@ -153,22 +153,6 @@ main .form-to-lead input:focus::placeholder{
     color: rgba(0, 0, 0, 0.8);
 }
 
-main .form-to-lead mark{
-    cursor: pointer;
-    position: relative;
-}
-
-main .form-to-lead .-show-text::after{
-    content: "Valor estimado de lucro dos nossos associados!";
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: none;
-    position: absolute;
-    padding: 10px;
-    min-width: 200px;
-    transition: all 1s ease-in;
-}
-
 main .form-to-lead mark:hover .-show-text::after{
     display: initial;
 }
@@ -344,6 +328,10 @@ main.main-content section.social figcaption{
     font-size: 2.5em;
     margin-top: 30px;
     text-transform: uppercase;
+}
+
+.fas.fa-money-bill-wave{
+    color: green;
 }
 
 @media screen and (max-width: 991px){
