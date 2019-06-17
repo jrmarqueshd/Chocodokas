@@ -24,6 +24,14 @@ gulp.task("watchJS", ()=>{
         .pipe(livereload(console.log("Start watching JS...")));
 });
 
+gulp.task("watchSW", ()=>{
+    livereload.listen();
+    return watch("./src/js/sw.js", {ignoreInitial: false})
+        .pipe(minify())
+        .pipe(gulp.dest("./"))
+        .pipe(livereload(console.log("Start watching SW...")));
+});
+
 gulp.task("watchImage", ()=>{
     livereload.listen();
     return watch("./src/img/*", {ignoreInitial: false})
@@ -49,5 +57,5 @@ gulp.task("htmlMin", ()=>{
         .pipe(livereload(console.log("Start watching HTML...")))
 });
 
-gulp.task("default", gulp.parallel(['watchCSS', 'watchJS','htmlMin']));
+gulp.task("default", gulp.parallel(['watchCSS', 'watchJS','htmlMin', 'watchSW']));
 gulp.task("tinyPNG", gulp.parallel(['watchImage']));

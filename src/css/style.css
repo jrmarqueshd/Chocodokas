@@ -27,6 +27,18 @@ body.thanks{
     justify-content: center;
 }
 
+body.disconnect img{
+    position: initial;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+body.disconnect button.-hidden{
+    display: none;
+}
+
 header{
     /* border-bottom: 1px solid #cccccc; */
     color: #681857;

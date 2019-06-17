@@ -1,3 +1,34 @@
+if("serviceWorker" in navigator){
+  window.addEventListener("load", ()=>{
+    navigator.serviceWorker.register("/sw.js").then((reg)=>{
+      console.log("[ServiceWorker] Foi instalado com sucesso! ", reg);
+    }, (errReg)=>{
+      console.log("[ServiceWorker] A instalação falhou! ", errReg);
+    });
+  });
+}
+
+let $body = document.querySelector("body");
+
+if($body.classList.contains("disconnect")){
+  window.addEventListener("load", ()=>{
+    let $buttonReload = document.getElementById("btnReload");
+    // setInterval(()=>{
+    //   if(navigator.onLine){
+    //     $buttonReload.classList.remove("-hidden");
+    //     console.log(200);
+    //   }else{
+    //     $buttonReload.classList.add("-hidden");
+    //     console.log("!=",200);
+    //   }
+    // }, 2000);
+
+    $buttonReload.addEventListener("click", ()=>{
+      window.reload();
+    })
+  });
+}
+
 const menuItems = document.querySelectorAll('a[href^="#"]');
 
 function getScrollTopByHref(element) {
@@ -52,57 +83,57 @@ function smoothScrollTo(endX, endY, duration) {
   }, 1000 / 60); // 60 fps
 };
 
-// Após a window carregar por completa
-window.addEventListener("load", ()=>{
-    // Variaveis JS
-    let date = new Date();
-    let year = date.getUTCFullYear(-3);
-    let since = 2018;
+// Variaveis JS
+let date = new Date();
+let year = date.getUTCFullYear(-3);
+let since = 2018;
 
-    let nameUrl = String;
-    let telUrl = String;
-    let emailUrl = "";
-    let msg = String
-    
-    // Variaveis Browser
-    let $year = document.getElementById("since");
-    const $button = document.getElementById("buttonForm");
-    const $nameForm = document.getElementById("nameForm");
-    const $telForm = document.getElementById("telForm");
-    const $emailForm = document.getElementById("emailForm");
-    // let $form = document
+let nameUrl = String;
+let telUrl = String;
+let emailUrl = "";
+let msg = String
 
-    $button.addEventListener("click", (e)=>{
-      // e.preventDefault();
+// Variaveis Browser
+let $year = document.getElementById("since");
+const $button = document.getElementById("buttonForm");
+const $nameForm = document.getElementById("nameForm");
+const $telForm = document.getElementById("telForm");
+const $emailForm = document.getElementById("emailForm");
+// let $form = document
 
-      try{
-        if($nameForm.value == "" || $nameForm.value == " ") throw "Por favor, preencha o seu nome!";
-        if($telForm.value == "" || $telForm.value == " ") throw "Por favor, preencha o seu WhatsApp!";
+if($body.classList.contains("index") || $body.classList.contains("thanks")){
+  $button.addEventListener("click", (e)=>{
+    // e.preventDefault();
 
-        else{
-          nameUrl = $nameForm.value;
-          telUrl = $telForm.value;
-          emailUrl = $emailForm.value;
-          telNumber = "11958804102";
+    try{
+      if($nameForm.value == "" || $nameForm.value == " ") throw "Por favor, preencha o seu nome!";
+      if($telForm.value == "" || $telForm.value == " ") throw "Por favor, preencha o seu WhatsApp!";
 
-          msg = `Ol%C3%A1%20me%20chamo%20*${nameUrl}*%20meu%20n%C3%BAmero%20%C3%A9%20o%20*${telUrl}*%20*${emailUrl}*,%20gostaria%20de%20saber%20mais%20sobre%20a%20venda%20de%20trufas%21%20`;
-          urlFinal = `https://api.whatsapp.com/send?phone=55${telNumber}&text=${msg}`;
-          window.open(urlFinal, "_blank").focus();
+      else{
+        nameUrl = $nameForm.value;
+        telUrl = $telForm.value;
+        emailUrl = $emailForm.value;
+        telNumber = "11958804102";
 
-          window.open = "";
-        }
+        msg = `Ol%C3%A1%20me%20chamo%20*${nameUrl}*%20meu%20n%C3%BAmero%20%C3%A9%20o%20*${telUrl}*%20*${emailUrl}*,%20gostaria%20de%20saber%20mais%20sobre%20a%20venda%20de%20trufas%21%20`;
+        urlFinal = `https://api.whatsapp.com/send?phone=55${telNumber}&text=${msg}`;
+        window.open(urlFinal, "_blank").focus();
+
+        // window.open = "";
       }
-      catch(err){
-        alert(err);
-      }
-
-    });
-
-    // Imprime since no footer
-    if(since == year){
-        $year.innerText = `${year}.`;
     }
-    else{
-        $year.innerText = `${since} - ${year}.`;
+    catch(err){
+      alert(err);
     }
-});
+
+  });
+}
+
+// Imprime since no footer
+if(since == year){
+    $year.innerText = `${year}.`;
+}
+else{
+    $year.innerText = `${since} - ${year}.`;
+}
+
